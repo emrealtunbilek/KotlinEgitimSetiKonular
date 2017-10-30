@@ -40,6 +40,6 @@ fun main(args: Array<String>) {
 
     var doubleMax = Double.MAX_VALUE
     println("Double en büyük $doubleMax")
-    
+
 
 }
