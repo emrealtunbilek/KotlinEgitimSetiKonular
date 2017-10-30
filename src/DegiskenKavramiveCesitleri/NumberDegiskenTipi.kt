@@ -42,4 +42,6 @@ fun main(args: Array<String>) {
     println("Double en büyük $doubleMax")
 
 
+    piSayim
+
 }

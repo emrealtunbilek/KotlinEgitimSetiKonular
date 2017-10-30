@@ -37,7 +37,6 @@ fun main(args: Array<String>) {
     var sayi1 = 8555
     println(sayi1 + 1)
 
-
     println(sayi1.toString()+1)
 
 
