@@ -2,6 +2,7 @@ package operatorler
 
 fun main(args: Array<String>) {
 
+
     var sart1 = true
     var sart2= false
 
