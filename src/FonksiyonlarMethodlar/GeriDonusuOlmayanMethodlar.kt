@@ -23,7 +23,7 @@ fun isimYazdir(){
     println("29")
 }
 
-fun menuGoster(){
+private fun menuGoster(){
 
     println("MENU GOSTER")
     println("1 - Iki sayının toplamını bul")
