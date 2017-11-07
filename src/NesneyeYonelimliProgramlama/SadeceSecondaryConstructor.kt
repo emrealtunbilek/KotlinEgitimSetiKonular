@@ -1,6 +1,6 @@
 package NesneyeYonelimliProgramlama
 
-class Kare{
+ class Kare{
 
     var tekKenar : Int = 0
 
