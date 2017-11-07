@@ -11,7 +11,7 @@ class Ogrenci (isim:String, yas:Int) {
         println("İnit blogu calıstı")
         println("Isim : $isim Yas: $yas")
     }
-    
+
     fun bilgileriGoster(){
         println("Isim : $gelenIsim Yas: $gelenYas")
     }
