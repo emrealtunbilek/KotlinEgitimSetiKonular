@@ -28,6 +28,12 @@ fun main(args: Array<String>) {
     var yuzbasi=Yuzbasi()
 
 
+  /*  var asker2:Asker
+    asker2=Asker()
+    asker2=Er()
+    asker2=Yuzbasi()*/
+
+
 
     hazirOl(asker)
     hazirOl(er)
