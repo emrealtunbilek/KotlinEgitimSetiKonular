@@ -11,7 +11,7 @@ open class Calisan {
 
 }
 
-class Mudur : Calisan(){
+open class Mudur : Calisan(){
 
     override var pozisyon: String = "Müdür"
 
@@ -22,12 +22,44 @@ class Mudur : Calisan(){
 
 }
 
-class Programci : Calisan(){
+class GenelMudur : Mudur(){
+
+    override var pozisyon: String = "Genel Müdür"
+
+    override fun calis() {
+        println("$pozisyon çalışmaya başladı")
+    }
+
+}
+
+open class Programci : Calisan(){
 
     override var pozisyon: String = "Programcı"
 
     override fun calis() {
         println("$pozisyon çalışmaya başladı")
+    }
+}
+
+class AnalizProgramci : Programci(){
+
+    override var pozisyon: String = "Analiz programcı"
+
+    override fun calis() {
+        println("$pozisyon çalışmaya başladı")
+    }
+
+}
+
+class SistemProgramcisi : Programci(){
+    override var pozisyon: String = "Sistem programcısı"
+
+    override fun calis() {
+        println("$pozisyon çalışmaya başladı")
+    }
+
+    fun sistemiIncele(){
+        println("Sistemi inceliyor")
     }
 }
 
@@ -49,12 +81,15 @@ fun main(args: Array<String>) {
     calisanlar[2]=Programci()
     calisanlar[3]=Pazarlamaci()*/
 
-    var calisanlar=Array<Calisan>(4){Calisan()}
+    var calisanlar=Array<Calisan>(7){Calisan()}
 
     calisanlar[0]=Calisan() //yukarı çevrim upcasting
     calisanlar[1]=Mudur()
     calisanlar[2]=Programci()
     calisanlar[3]=Pazarlamaci()
+    calisanlar[4]=GenelMudur()
+    calisanlar[5]=AnalizProgramci()
+    calisanlar[6]=SistemProgramcisi()
 
     //mesaiyeBasla(calisanlar)
     mesaiyeBaslaPolimorfizm(calisanlar)
@@ -93,6 +128,11 @@ fun mesaiyeBaslaPolimorfizm(calisanlar: Array<Calisan>){
     for (oankiCalisan in calisanlar){
 
         oankiCalisan.calis()
+
+        if(oankiCalisan is SistemProgramcisi){
+            oankiCalisan.sistemiIncele()
+        }
+
     }
 
 }
