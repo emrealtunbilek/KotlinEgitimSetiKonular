@@ -32,7 +32,7 @@ class Sportmenler:BuzPateni(), Basketbol(){
 interface BuzUstundeKayabilme {
 
     fun buzustundeKay()
-    
+
 }
 
 interface BasketAtabilme{
