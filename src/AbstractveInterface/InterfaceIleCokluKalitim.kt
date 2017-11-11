@@ -1,0 +1,52 @@
+package AbstractveInterface
+/*
+abstract class Sporcu{
+
+    abstract fun sporYap()
+
+}
+
+open class BuzPateni : Sporcu(){
+
+    override fun sporYap() {
+       println("Buz pateni yapıyor")
+    }
+
+}
+
+open class Basketbol : Sporcu(){
+
+    override fun sporYap() {
+        println("Basketnbol oynuyor")
+    }
+
+}
+
+class Sportmenler:BuzPateni(), Basketbol(){
+
+    var sporcu:Sporcu=Sportmenler()
+    sporcu.
+
+}
+        */
+interface BuzUstundeKayabilme {
+
+    fun buzustundeKay()
+    
+}
+
+interface BasketAtabilme{
+    fun basketAt()
+}
+
+class Sportmenler : BuzUstundeKayabilme, BasketAtabilme{
+    override fun buzustundeKay() {
+
+    }
+
+    override fun basketAt() {
+
+    }
+
+
+}
