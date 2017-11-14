@@ -1,4 +1,4 @@
-package DataClassGetterSetter
+package DataClassGetterSetterEnum
 
 class Kisi(val id:Int, val isim:String){
 
