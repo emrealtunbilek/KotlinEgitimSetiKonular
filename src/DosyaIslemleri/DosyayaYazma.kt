@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     var isim= readLine()!!
 
     dosya.write(isim+"\n")
-    dosya.write("Yaş 29\n")
+    dosya.write("Yaş 29")
     println("Veri dosyaya yazıldı")
     dosya.close()
 
