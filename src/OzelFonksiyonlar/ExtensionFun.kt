@@ -11,6 +11,25 @@ fun main(args: Array<String>) {
     println("Düzenlenmiş hali : " + yazi.boslukDuzenle())
 
 
+    var emre=Ogr()
+    emre.yetenek="Kotlin"
+    emre.yetenekYazdir()
+
+    var hasan=Ogr()
+    hasan.yetenek="Android"
+    hasan.yetenekYazdir()
+
+
+    var ali:Ogr=emre.yetenekBirlestir(hasan)
+    ali.yetenekYazdir()
+
+
+    var can:Ogr=ali yetenekBirlestir hasan
+    can.yetenekYazdir()
+
+
+
+
 }
 
 fun faktoriyelBul(sayi:Int) : Int {
@@ -41,6 +60,17 @@ fun String.boslukDuzenle() : String{
     var regex=Regex("\\s+")
     return regex.replace(this, " ")
 
+
+
+}
+
+infix fun Ogr.yetenekBirlestir(hasan:Ogr) : Ogr {
+
+    var olusturulanOgrNesnesi=Ogr()
+
+    olusturulanOgrNesnesi.yetenek = this.yetenek + " " + hasan.yetenek
+
+    return olusturulanOgrNesnesi
 
 
 }
