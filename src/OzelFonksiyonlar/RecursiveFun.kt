@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
 
    // selamVer()
     println("Normal faktoriyel 70000 ! = " + normalFaktoriyelBul(BigInteger("70000")))
-    println("RecVer faktoriyel 70000 ! = " + recursiveFaktoriyel(BigInteger("70000")))
+    println("RecVer faktoriyel 70000 ! = " + recursiveFaktoriyel(BigInteger("70000"), BigInteger("1")))
 
 }
 
@@ -20,13 +20,13 @@ fun normalFaktoriyelBul(sayi:BigInteger) : BigInteger {
 
 }
 
-fun recursiveFaktoriyel(sayi : BigInteger) : BigInteger {
+tailrec fun recursiveFaktoriyel(sayi : BigInteger, sonuc:BigInteger= BigInteger.ONE) : BigInteger {
 
     if (sayi == BigInteger.ZERO){
-        return BigInteger("1") // BigInteger.ONE
+        return sonuc // BigInteger.ONE
     }else{
 
-        return sayi * recursiveFaktoriyel(sayi - BigInteger.ONE)
+        return recursiveFaktoriyel(sayi - BigInteger.ONE, sayi*sonuc)
 
     }
 
