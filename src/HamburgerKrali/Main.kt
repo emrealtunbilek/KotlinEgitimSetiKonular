@@ -16,4 +16,24 @@ fun main(args: Array<String>) {
     Fiyatları kendiniz beliryebilirsiniz.
     Önemli olan bu yapıyı nesneye yönelimli programlama öğelerini kullanarak gerçekleştirebilmeniz..
     */
+
+    val h1:Hamburger= Hamburger("Sade", "Beyaz", "Kırmızı", 8.8)
+    h1.ekleExtraUrun1("Ketçap", 1.5)
+    h1.ekleExtraUrun2("Soğan halkası", 3.4)
+
+    var toplamUcret= h1.hamburgerBilgileri()
+    println("Toplam ücret : $toplamUcret")
+
+    val s1:SaglikliBurger= SaglikliBurger("Balık", 11.0)
+    s1.ekleExtraUrun3("Susam", 2.0)
+    s1.ekleSaglikliUrun1("Zencefil", 3.5)
+    toplamUcret=s1.hamburgerBilgileri()
+    println("Sağlıklı hamburger toplam fiyat : $toplamUcret ")
+
+    var b1:BabaBurger= BabaBurger()
+    b1.ekleExtraUrun1("Mayonez", 2.0)
+    toplamUcret = b1.hamburgerBilgileri()
+    b1.ekleExtraUrun2("Mayonez", 2.0)
+    println("Baba hamburger toplam fiyat : $toplamUcret ")
+
 }
